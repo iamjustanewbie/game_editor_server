@@ -5,8 +5,9 @@ let fs = require("fs");
 let path = require("path");
 let ShellUtil = require("../lib/ShellUtil");
 const FileUtil = require("../lib/FileUtil");
+const { getPubDir } = require("../config");
 
-const ServerRoot = path.resolve(process.cwd(), "../editorpub/server/map/");
+const ServerRoot = path.resolve(getPubDir(), "./server/map/");
 
 class TeleportCtrl extends BaseCtrl {
 

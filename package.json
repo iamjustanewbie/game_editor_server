@@ -4,6 +4,7 @@
   "private": true,
   "main": "app.js",
   "dependencies": {
+    "images": "^3.2.3",
     "ws": "6.1.2"
   }
 }

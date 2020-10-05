@@ -5,12 +5,14 @@ const AnimCtrl = require("./controller/AnimCtrl");
 const MonsterCtrl = require("./controller/MonsterCtrl");
 const TeleportCtrl = require("./controller/TeleportCtrl");
 const SceneCtrl = require("./controller/SceneCtrl");
+const CutMapCtrl = require("./controller/CutMapCtrl");
 
 server.add(1, new MapCtrl());
 server.add(2, new AnimCtrl());
 server.add(3, new MonsterCtrl());
 server.add(4, new TeleportCtrl());
 server.add(5, new SceneCtrl());
+server.add(6, new CutMapCtrl());
 
 server.start("0.0.0.0", 3001);
 

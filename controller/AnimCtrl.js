@@ -7,11 +7,12 @@ const FileUtil = require("../lib/FileUtil");
 const ShellUtil = require("../lib/ShellUtil");
 const ByteArray = require("../lib/ByteArray");
 const zlib = require("zlib");
+const { getOutDir, getPubDir } = require("../config");
 
-const AnimRoot = path.resolve(process.cwd(), "../editorout/anim/");
-const PublishRoot = path.resolve(process.cwd(), "../editorpub/client/anim/");
+const AnimRoot = path.join(getOutDir(), "./anim/");
+const PublishRoot = path.join(getPubDir(), "./client/anim/");
 const AnimBin = path.join(PublishRoot, "anim.json");
-const EffectRoot = path.join(process.cwd(), "../editorpub/client/data_effect/");
+const EffectRoot = path.join(getPubDir(), "./client/data_effect/");
 
 const ValidName = [
     ["body", "creature", "effect", "faqi", "fabao", "horse", "pet", "pethorse", "petweapon", "skill", "weapon", "wing", "wushen", "lingzhen", "npc", "atkeffect"],

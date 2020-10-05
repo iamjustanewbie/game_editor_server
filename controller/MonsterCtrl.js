@@ -4,9 +4,10 @@ let PublishCode = require("../lib/PublishCode");
 let fs = require("fs");
 let path = require("path");
 let ShellUtil = require("../lib/ShellUtil");
+const { getOutDir, getPubDir } = require("../config");
 
-const MapRoot = path.resolve(process.cwd(), "../editorout/map/");
-const ServerRoot = path.resolve(process.cwd(), "../editorpub/server/map/");
+const MapRoot = path.resolve(getOutDir(), "./map/");
+const ServerRoot = path.resolve(getPubDir(), "./server/map/");
 
 class MonsterCtrl extends BaseCtrl {
 

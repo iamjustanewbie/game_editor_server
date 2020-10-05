@@ -5,11 +5,12 @@ let fs = require("fs");
 let path = require("path");
 let ShellUtil = require("../lib/ShellUtil");
 const FileUtil = require("../lib/FileUtil");
+const { getPubDir, getOutDir } = require("../config");
 
-const ServerRoot = path.resolve(process.cwd(), "../editorpub/server/");
-const InfoRoot = path.resolve(process.cwd(), "../editorout/scene/");
+const ServerRoot = path.resolve(getPubDir(), "./server/");
+const InfoRoot = path.resolve(getOutDir(), "./scene/");
 
-const PublishRoot = path.resolve(process.cwd(), "../editorpub/client/data/");
+const PublishRoot = path.resolve(getPubDir(), "./client/data/");
 class SceneCrtl extends BaseCtrl {
 
     constructor() {

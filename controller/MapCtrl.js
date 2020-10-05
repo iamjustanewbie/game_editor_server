@@ -7,10 +7,11 @@ const FileUtil = require("../lib/FileUtil");
 const ShellUtil = require("../lib/ShellUtil");
 const ByteArray = require("../lib/ByteArray");
 const zlib = require("zlib");
+const { getOutDir, getPubDir } = require("../config");
 
-const MapRoot = path.resolve(process.cwd(), "../editorout/map/");
-const PublishRoot = path.resolve(process.cwd(), "../editorpub/client/map/");
-const ServerRoot = path.resolve(process.cwd(), "../editorpub/server/");
+const MapRoot = path.join(getOutDir(), "./map/");
+const PublishRoot = path.join(getPubDir(), "./client/map/");
+const ServerRoot = path.join(getPubDir(), "./server/");
 
 function getInfoPath(mapId) {
     return path.join(MapRoot, mapId.toString(), "info.json");
